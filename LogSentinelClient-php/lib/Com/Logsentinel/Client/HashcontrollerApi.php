@@ -100,13 +100,13 @@ class HashcontrollerApi
      * @param string $signed_login_challenge Signed-Login-Challenge (optional)
      * @param string $user_public_key User-Public-Key (optional)
      * @param string $actor_display_name actorDisplayName (optional)
-     * @param string $actor_role actorRole (optional)
+     * @param string $actor_roles actorRole (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return string
      */
-    public function getHashableContentForAuthActionUsingPOST($actor_id, $auth_action, $details, $application_id, $user_id = null, $signed_login_challenge = null, $user_public_key = null, $actor_display_name = null, $actor_role = null)
+    public function getHashableContentForAuthActionUsingPOST($actor_id, $auth_action, $details, $application_id, $user_id = null, $signed_login_challenge = null, $user_public_key = null, $actor_display_name = null, $actor_roles = null)
     {
-        list($response) = $this->getHashableContentForAuthActionUsingPOSTWithHttpInfo($actor_id, $auth_action, $details, $application_id, $user_id, $signed_login_challenge, $user_public_key, $actor_display_name, $actor_role);
+        list($response) = $this->getHashableContentForAuthActionUsingPOSTWithHttpInfo($actor_id, $auth_action, $details, $application_id, $user_id, $signed_login_challenge, $user_public_key, $actor_display_name, $actor_roles);
         return $response;
     }
 
@@ -123,11 +123,11 @@ class HashcontrollerApi
      * @param string $signed_login_challenge Signed-Login-Challenge (optional)
      * @param string $user_public_key User-Public-Key (optional)
      * @param string $actor_display_name actorDisplayName (optional)
-     * @param string $actor_role actorRole (optional)
+     * @param string $actor_roles actorRole (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getHashableContentForAuthActionUsingPOSTWithHttpInfo($actor_id, $auth_action, $details, $application_id, $user_id = null, $signed_login_challenge = null, $user_public_key = null, $actor_display_name = null, $actor_role = null)
+    public function getHashableContentForAuthActionUsingPOSTWithHttpInfo($actor_id, $auth_action, $details, $application_id, $user_id = null, $signed_login_challenge = null, $user_public_key = null, $actor_display_name = null, $actor_roles = null)
     {
         // verify the required parameter 'actor_id' is set
         if ($actor_id === null) {
@@ -166,8 +166,8 @@ class HashcontrollerApi
             $queryParams['actorDisplayName'] = $this->apiClient->getSerializer()->toQueryValue($actor_display_name);
         }
         // query params
-        if ($actor_role !== null) {
-            $queryParams['actorRole'] = $this->apiClient->getSerializer()->toQueryValue($actor_role);
+        if ($actor_roles !== null) {
+            $queryParams['actorRoles'] = $this->apiClient->getSerializer()->toQueryValue($actor_roles);
         }
         // header params
         if ($application_id !== null) {
@@ -253,13 +253,13 @@ class HashcontrollerApi
      * @param string $details details (required)
      * @param string $application_id Application-Id (required)
      * @param string $actor_display_name actorDisplayName (optional)
-     * @param string $actor_role actorRole (optional)
+     * @param string $actor_roles actorRole (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return string
      */
-    public function getHashableContentForStandardActionUsingPOST($actor_id, $action, $entity_type, $entity_id, $details, $application_id, $actor_display_name = null, $actor_role = null)
+    public function getHashableContentForStandardActionUsingPOST($actor_id, $action, $entity_type, $entity_id, $details, $application_id, $actor_display_name = null, $actor_roles = null)
     {
-        list($response) = $this->getHashableContentForStandardActionUsingPOSTWithHttpInfo($actor_id, $action, $entity_type, $entity_id, $details, $application_id, $actor_display_name, $actor_role);
+        list($response) = $this->getHashableContentForStandardActionUsingPOSTWithHttpInfo($actor_id, $action, $entity_type, $entity_id, $details, $application_id, $actor_display_name, $actor_roles);
         return $response;
     }
 
@@ -275,11 +275,11 @@ class HashcontrollerApi
      * @param string $details details (required)
      * @param string $application_id Application-Id (required)
      * @param string $actor_display_name actorDisplayName (optional)
-     * @param string $actor_role actorRole (optional)
+     * @param string $actor_roles actorRole (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getHashableContentForStandardActionUsingPOSTWithHttpInfo($actor_id, $action, $entity_type, $entity_id, $details, $application_id, $actor_display_name = null, $actor_role = null)
+    public function getHashableContentForStandardActionUsingPOSTWithHttpInfo($actor_id, $action, $entity_type, $entity_id, $details, $application_id, $actor_display_name = null, $actor_roles = null)
     {
         // verify the required parameter 'actor_id' is set
         if ($actor_id === null) {
@@ -322,8 +322,8 @@ class HashcontrollerApi
             $queryParams['actorDisplayName'] = $this->apiClient->getSerializer()->toQueryValue($actor_display_name);
         }
         // query params
-        if ($actor_role !== null) {
-            $queryParams['actorRole'] = $this->apiClient->getSerializer()->toQueryValue($actor_role);
+        if ($actor_roles !== null) {
+            $queryParams['actorRoles'] = $this->apiClient->getSerializer()->toQueryValue($actor_roles);
         }
         // header params
         if ($application_id !== null) {
@@ -511,13 +511,13 @@ class HashcontrollerApi
      * @param string $details details (required)
      * @param string $application_id Application-Id (required)
      * @param string $actor_display_name actorDisplayName (optional)
-     * @param string $actor_role actorRole (optional)
+     * @param string $actor_roles actorRole (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return string
      */
-    public function getHashableContentUsingPOST($actor_id, $action, $details, $application_id, $actor_display_name = null, $actor_role = null)
+    public function getHashableContentUsingPOST($actor_id, $action, $details, $application_id, $actor_display_name = null, $actor_roles = null)
     {
-        list($response) = $this->getHashableContentUsingPOSTWithHttpInfo($actor_id, $action, $details, $application_id, $actor_display_name, $actor_role);
+        list($response) = $this->getHashableContentUsingPOSTWithHttpInfo($actor_id, $action, $details, $application_id, $actor_display_name, $actor_roles);
         return $response;
     }
 
@@ -531,11 +531,11 @@ class HashcontrollerApi
      * @param string $details details (required)
      * @param string $application_id Application-Id (required)
      * @param string $actor_display_name actorDisplayName (optional)
-     * @param string $actor_role actorRole (optional)
+     * @param string $actor_roles actorRole (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getHashableContentUsingPOSTWithHttpInfo($actor_id, $action, $details, $application_id, $actor_display_name = null, $actor_role = null)
+    public function getHashableContentUsingPOSTWithHttpInfo($actor_id, $action, $details, $application_id, $actor_display_name = null, $actor_roles = null)
     {
         // verify the required parameter 'actor_id' is set
         if ($actor_id === null) {
@@ -570,8 +570,8 @@ class HashcontrollerApi
             $queryParams['actorDisplayName'] = $this->apiClient->getSerializer()->toQueryValue($actor_display_name);
         }
         // query params
-        if ($actor_role !== null) {
-            $queryParams['actorRole'] = $this->apiClient->getSerializer()->toQueryValue($actor_role);
+        if ($actor_roles !== null) {
+            $queryParams['actorRoles'] = $this->apiClient->getSerializer()->toQueryValue($actor_roles);
         }
         // header params
         if ($application_id !== null) {

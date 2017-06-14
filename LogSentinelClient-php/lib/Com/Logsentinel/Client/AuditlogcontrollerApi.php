@@ -101,13 +101,13 @@ class AuditlogcontrollerApi
      * @param string $signed_login_challenge Signed-Login-Challenge (optional)
      * @param string $user_public_key User-Public-Key (optional)
      * @param string $actor_display_name actorDisplayName (optional)
-     * @param string $actor_role actorRole (optional)
+     * @param string $actor_roles actorRole (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Com\Logsentinel\Client\Model\LogResponse
      */
-    public function logAuthActionUsingPOST($actor_id, $auth_action, $details, $application_id, $user_id = null, $authorization = null, $signed_login_challenge = null, $user_public_key = null, $actor_display_name = null, $actor_role = null)
+    public function logAuthActionUsingPOST($actor_id, $auth_action, $details, $application_id, $user_id = null, $authorization = null, $signed_login_challenge = null, $user_public_key = null, $actor_display_name = null, $actor_roles = null)
     {
-        list($response) = $this->logAuthActionUsingPOSTWithHttpInfo($actor_id, $auth_action, $details, $application_id, $user_id, $authorization, $signed_login_challenge, $user_public_key, $actor_display_name, $actor_role);
+        list($response) = $this->logAuthActionUsingPOSTWithHttpInfo($actor_id, $auth_action, $details, $application_id, $user_id, $authorization, $signed_login_challenge, $user_public_key, $actor_display_name, $actor_roles);
         return $response;
     }
 
@@ -125,11 +125,11 @@ class AuditlogcontrollerApi
      * @param string $signed_login_challenge Signed-Login-Challenge (optional)
      * @param string $user_public_key User-Public-Key (optional)
      * @param string $actor_display_name actorDisplayName (optional)
-     * @param string $actor_role actorRole (optional)
+     * @param string $actor_roles actorRole (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Com\Logsentinel\Client\Model\LogResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function logAuthActionUsingPOSTWithHttpInfo($actor_id, $auth_action, $details, $application_id, $user_id = null, $authorization = null, $signed_login_challenge = null, $user_public_key = null, $actor_display_name = null, $actor_role = null)
+    public function logAuthActionUsingPOSTWithHttpInfo($actor_id, $auth_action, $details, $application_id, $user_id = null, $authorization = null, $signed_login_challenge = null, $user_public_key = null, $actor_display_name = null, $actor_roles = null)
     {
         // verify the required parameter 'actor_id' is set
         if ($actor_id === null) {
@@ -168,8 +168,8 @@ class AuditlogcontrollerApi
             $queryParams['actorDisplayName'] = $this->apiClient->getSerializer()->toQueryValue($actor_display_name);
         }
         // query params
-        if ($actor_role !== null) {
-            $queryParams['actorRole'] = $this->apiClient->getSerializer()->toQueryValue($actor_role);
+        if ($actor_roles !== null) {
+            $queryParams['actorRoles'] = $this->apiClient->getSerializer()->toQueryValue($actor_roles);
         }
         // header params
         if ($authorization !== null) {
@@ -362,13 +362,13 @@ class AuditlogcontrollerApi
      * @param string $application_id Application-Id (required)
      * @param string $authorization Authorization (optional)
      * @param string $actor_display_name actorDisplayName (optional)
-     * @param string $actor_role actorRole (optional)
+     * @param string $actor_roles actorRole (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Com\Logsentinel\Client\Model\LogResponse
      */
-    public function logStandardActionUsingPOST($actor_id, $action, $entity_type, $entity_id, $details, $application_id, $authorization = null, $actor_display_name = null, $actor_role = null)
+    public function logStandardActionUsingPOST($actor_id, $action, $entity_type, $entity_id, $details, $application_id, $authorization = null, $actor_display_name = null, $actor_roles = null)
     {
-        list($response) = $this->logStandardActionUsingPOSTWithHttpInfo($actor_id, $action, $entity_type, $entity_id, $details, $application_id, $authorization, $actor_display_name, $actor_role);
+        list($response) = $this->logStandardActionUsingPOSTWithHttpInfo($actor_id, $action, $entity_type, $entity_id, $details, $application_id, $authorization, $actor_display_name, $actor_roles);
         return $response;
     }
 
@@ -385,11 +385,11 @@ class AuditlogcontrollerApi
      * @param string $application_id Application-Id (required)
      * @param string $authorization Authorization (optional)
      * @param string $actor_display_name actorDisplayName (optional)
-     * @param string $actor_role actorRole (optional)
+     * @param string $actor_roles actorRole (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Com\Logsentinel\Client\Model\LogResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function logStandardActionUsingPOSTWithHttpInfo($actor_id, $action, $entity_type, $entity_id, $details, $application_id, $authorization = null, $actor_display_name = null, $actor_role = null)
+    public function logStandardActionUsingPOSTWithHttpInfo($actor_id, $action, $entity_type, $entity_id, $details, $application_id, $authorization = null, $actor_display_name = null, $actor_roles = null)
     {
         // verify the required parameter 'actor_id' is set
         if ($actor_id === null) {
@@ -432,8 +432,8 @@ class AuditlogcontrollerApi
             $queryParams['actorDisplayName'] = $this->apiClient->getSerializer()->toQueryValue($actor_display_name);
         }
         // query params
-        if ($actor_role !== null) {
-            $queryParams['actorRole'] = $this->apiClient->getSerializer()->toQueryValue($actor_role);
+        if ($actor_roles !== null) {
+            $queryParams['actorRoles'] = $this->apiClient->getSerializer()->toQueryValue($actor_roles);
         }
         // header params
         if ($authorization !== null) {
@@ -530,13 +530,13 @@ class AuditlogcontrollerApi
      * @param string $application_id Application-Id (required)
      * @param string $authorization Authorization (optional)
      * @param string $actor_display_name actorDisplayName (optional)
-     * @param string $actor_role actorRole (optional)
+     * @param string $actor_roles actorRole (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Com\Logsentinel\Client\Model\LogResponse
      */
-    public function logUsingPOST($actor_id, $action, $details, $application_id, $authorization = null, $actor_display_name = null, $actor_role = null)
+    public function logUsingPOST($actor_id, $action, $details, $application_id, $authorization = null, $actor_display_name = null, $actor_roles = null)
     {
-        list($response) = $this->logUsingPOSTWithHttpInfo($actor_id, $action, $details, $application_id, $authorization, $actor_display_name, $actor_role);
+        list($response) = $this->logUsingPOSTWithHttpInfo($actor_id, $action, $details, $application_id, $authorization, $actor_display_name, $actor_roles);
         return $response;
     }
 
@@ -551,11 +551,11 @@ class AuditlogcontrollerApi
      * @param string $application_id Application-Id (required)
      * @param string $authorization Authorization (optional)
      * @param string $actor_display_name actorDisplayName (optional)
-     * @param string $actor_role actorRole (optional)
+     * @param string $actor_roles actorRole (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Com\Logsentinel\Client\Model\LogResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function logUsingPOSTWithHttpInfo($actor_id, $action, $details, $application_id, $authorization = null, $actor_display_name = null, $actor_role = null)
+    public function logUsingPOSTWithHttpInfo($actor_id, $action, $details, $application_id, $authorization = null, $actor_display_name = null, $actor_roles = null)
     {
         // verify the required parameter 'actor_id' is set
         if ($actor_id === null) {
@@ -590,8 +590,8 @@ class AuditlogcontrollerApi
             $queryParams['actorDisplayName'] = $this->apiClient->getSerializer()->toQueryValue($actor_display_name);
         }
         // query params
-        if ($actor_role !== null) {
-            $queryParams['actorRole'] = $this->apiClient->getSerializer()->toQueryValue($actor_role);
+        if ($actor_roles !== null) {
+            $queryParams['actorRoles'] = $this->apiClient->getSerializer()->toQueryValue($actor_roles);
         }
         // header params
         if ($authorization !== null) {
